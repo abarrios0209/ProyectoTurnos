@@ -4,9 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-
+import com.ejercicio1.semilla.Turnos.dto.ResponseDTO;
 import com.ejercicio1.semilla.Turnos.dto.ServiciosDTO;
 
 import com.ejercicio1.semilla.Turnos.entity.ServiciosEntity;
@@ -23,62 +24,75 @@ public class ServiciosService implements IServiciosService {
 	private IServiciosMapper mapperServicios;
 
 	@Override
-	public List<ServiciosEntity> getAll() {
+	public ResponseDTO getAll() {
 		// TODO Auto-generated method stub
-		return serviciosRepository.findAll();
+		List<ServiciosEntity> servicioEntity =serviciosRepository.findAll();
+		return new ResponseDTO(mapperServicios.listEntityToDto(servicioEntity),true, "ok", HttpStatus.OK);
 	}
 	
 
 	@Override
-	public ServiciosDTO getServiciosById_servicio(Integer id_servicio) {
+	public ResponseDTO getServiciosById_servicio(Integer id_servicio) {
 		// TODO Auto-generated method stub
-		Optional<ServiciosEntity> optional= serviciosRepository.findById(id_servicio);
+		Optional<ServiciosEntity> optional = serviciosRepository.findById(id_servicio);
 		
 		if(optional.isPresent()) {
-			return null;
+			return	new ResponseDTO(mapperServicios.entityToDto(optional.get()), true, "ok", HttpStatus.OK);
 		}else {
 			return null;
 		}
 	}
 
 	@Override
-	public ServiciosDTO createServicios(ServiciosDTO serviciosDTO) {
+	public ResponseDTO createServicios(ServiciosDTO serviciosDTO) {
 		// TODO Auto-generated method stub
 		
-		ServiciosEntity serviciosEntity = mapperServicios.dtoToentity(serviciosDTO);
-		
 		try {
-			return mapperServicios.entityToDto(serviciosRepository.save(serviciosEntity));
+			ServiciosEntity serviciosEntity = mapperServicios.dtoToentity(serviciosDTO);
+			return new ResponseDTO(mapperServicios.entityToDto(serviciosRepository.save(serviciosEntity)), true, "ok", HttpStatus.OK);
 		}catch (Exception e){
-			return null;
+			return new ResponseDTO(null, false, "No se pudo crear el Servicio", HttpStatus.OK);
 		}
 	}
 
 	@Override
-	public ServiciosDTO updateServicios(ServiciosDTO serviciosDTO) {
+	public ResponseDTO updateServicios(ServiciosDTO serviciosDTO) {
 		// TODO Auto-generated method stub
 		
-		ServiciosEntity serviciosEntity = mapperServicios.dtoToentity(serviciosDTO);
-		
-		return mapperServicios.entityToDto(serviciosRepository.save(serviciosEntity));
+		try {
+			ServiciosEntity serviciosEntity = mapperServicios.dtoToentity(serviciosDTO);
+			
+			return new ResponseDTO(mapperServicios.entityToDto(serviciosRepository.save(serviciosEntity)), true, "ok", HttpStatus.OK);
+		}catch(Exception e) {
+			return new ResponseDTO(null, false, "No se pudo editar el Servicio", HttpStatus.OK);
+		}
 	}
 
 	@Override
-	public void deleteServicios(Integer id_servicio) {
+	public ResponseDTO deleteServicios(Integer id_servicio) {
 		// TODO Auto-generated method stub
 		
-		serviciosRepository.deleteById(id_servicio);
-		
+		try {
+			serviciosRepository.deleteById(id_servicio);
+			return new ResponseDTO(null,true, "Servicio Eliminado",HttpStatus.OK);
+		}catch (Exception e) {
+			return new ResponseDTO(null,false, "El Servicio no se puede Eliminar",HttpStatus.OK);
+		}
 	}
 	
 	@Override
-	public ServiciosDTO buscarPorId_servicio(Integer id_servicio) {
+	public ResponseDTO buscarPorId_servicio(Integer id_servicio) {
 		// TODO Auto-generated method stub
 		
-		Optional<ServiciosEntity> serviciosEntity = serviciosRepository.findById(id_servicio);
+		try {
+			Optional<ServiciosEntity> servicioEntity = serviciosRepository.findById(id_servicio);
+			servicioEntity.get();
+			return new ResponseDTO(mapperServicios.entityToDto(servicioEntity.get()), true, "ok", HttpStatus.OK);
+		}catch (Exception e) {
+			return new ResponseDTO(null, false, "No se encontro el Comercio", HttpStatus.OK);
+			
+		}
 		
-		
-		return mapperServicios.entityToDto(serviciosEntity.get());
 	}
 
 

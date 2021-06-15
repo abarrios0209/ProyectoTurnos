@@ -1,15 +1,15 @@
 package com.ejercicio1.semilla.Turnos.controller;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ejercicio1.semilla.Turnos.dto.TurnosDTO;
-import com.ejercicio1.semilla.Turnos.entity.TurnosEntity;
+import com.ejercicio1.semilla.Turnos.dto.ResponseDTO;
 import com.ejercicio1.semilla.Turnos.service.ITurnosService;
 
 @RestController
@@ -22,15 +22,27 @@ public class TurnosController {
 	
 	///listar todos
 	@GetMapping(path = "/all")
-	public List<TurnosEntity> getAll(){
+	public ResponseDTO getAll(){
 		
 		return turnosService.getAll();
 	}
 	
-	@GetMapping(path="/{id_turno}")
-	public TurnosDTO buscarPorId_turno(@PathVariable Integer id_turno) {
+	@GetMapping(path="/turnos/{id_turno}")
+	public ResponseDTO buscarPorId_turno(@PathVariable Integer id_turno) {
 		
 		return turnosService.buscarPorId_turno(id_turno);
 	}
+	
+	@GetMapping(path = "/parametro")
+	public ResponseDTO getTurnoParametroById(@RequestParam Integer id_turno) {
+		return turnosService.getTurnosById_turnos(id_turno);
+	}
+	
+	//buscar por id
+	@GetMapping(path = "/{id_turno}")
+	public ResponseDTO buscarPorId(@PathVariable Integer id_turno){
+		return turnosService.buscarPorId_turno(id_turno);
+	}
+	
 
 }

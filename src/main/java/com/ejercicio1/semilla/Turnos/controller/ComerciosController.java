@@ -1,6 +1,6 @@
 package com.ejercicio1.semilla.Turnos.controller;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ejercicio1.semilla.Turnos.dto.ComerciosDTO;
 import com.ejercicio1.semilla.Turnos.dto.ResponseDTO;
-import com.ejercicio1.semilla.Turnos.entity.ComerciosEntity;
 import com.ejercicio1.semilla.Turnos.service.IComerciosService;
 
 @RestController
@@ -25,7 +24,7 @@ public class ComerciosController {
 	
 	///listar todos
 	@GetMapping(path = "/all")
-	public List<ComerciosEntity> getAll() {
+	public ResponseDTO getAll() {
 		
 		return comerciosService.getAll();
 	}
@@ -48,17 +47,17 @@ public class ComerciosController {
 	
 	// crear
 	@PostMapping(path = "/crear", consumes = "application/json", produces = "application/json")
-	public ResponseDTO createComercio(@RequestBody ComerciosEntity entity) {
+	public ResponseDTO createComercio(@RequestBody ComerciosDTO dto) {
 		
-		return comerciosService.createComercio(entity); 
+		return comerciosService.createComercio(dto); 
 				
 	}
 	
 	//editar
 	@PostMapping(path="/editar", consumes = "application/json", produces = "application/json")
-	public ResponseDTO editarComercio(@RequestBody ComerciosEntity entity) {
+	public ResponseDTO editarComercio(@RequestBody ComerciosDTO dto) {
 		
-		return comerciosService.updateComercio(entity);
+		return comerciosService.updateComercio(dto);
 	}
 	//delete 
 	
@@ -72,7 +71,7 @@ public class ComerciosController {
 	
 	
 	@GetMapping(path="/{id_comercio}")
-	public ComerciosDTO buscarPorId_comercio(@PathVariable Integer id_comercio) {
+	public ResponseDTO buscarPorId_comercio(@PathVariable Integer id_comercio) {
 		
 		return comerciosService.buscarPorId_comercio(id_comercio);
 	}

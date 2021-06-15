@@ -1,6 +1,5 @@
 package com.ejercicio1.semilla.Turnos.controller;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ejercicio1.semilla.Turnos.dto.ResponseDTO;
 import com.ejercicio1.semilla.Turnos.dto.ServiciosDTO;
-import com.ejercicio1.semilla.Turnos.entity.ServiciosEntity;
 import com.ejercicio1.semilla.Turnos.service.IServiciosService;
 
 @RestController
@@ -24,20 +23,20 @@ public class ServiciosController {
 	
 	///listar todos
 	@GetMapping(path = "/all")
-	public List<ServiciosEntity> getAll(){
+	public ResponseDTO getAll(){
 		return serviciosService.getAll();
 	}
 	
 	///Listar uno
 	
 	@GetMapping(path="/servicios/{id_servicio}")
-	public ServiciosDTO getServiciosById_servicio(@PathVariable Integer id_servicio) {
+	public ResponseDTO getServiciosById_servicio(@PathVariable Integer id_servicio) {
 		
 		return serviciosService.getServiciosById_servicio(id_servicio);
 	}
 
 	@GetMapping(path="/servicios")
-	public ServiciosDTO getParameterServiciosById_servicio(@RequestParam Integer id_servicio) {
+	public ResponseDTO getParameterServiciosById_servicio(@RequestParam Integer id_servicio) {
 		
 		return serviciosService.getServiciosById_servicio(id_servicio);
 	}
@@ -45,7 +44,7 @@ public class ServiciosController {
 	
 	// crear
 	@PostMapping(path = "/crear", consumes = "application/json", produces = "application/json")
-	public ServiciosDTO createServicio(@RequestBody ServiciosDTO dto) {
+	public ResponseDTO createServicio(@RequestBody ServiciosDTO dto) {
 		
 		return serviciosService.createServicios(dto); 
 				
@@ -53,22 +52,22 @@ public class ServiciosController {
 	
 	//editar
 	@PostMapping(path="/editar", consumes = "application/json", produces = "application/json")
-	public ServiciosDTO editarComercio(@RequestBody ServiciosDTO dto) {
+	public ResponseDTO editarComercio(@RequestBody ServiciosDTO dto) {
 		
 		return serviciosService.updateServicios(dto);
 	}
 	//delete 
 	
 	@GetMapping(path = "/eliminar/{id_servicio}")
-	public void deleteServicios(@PathVariable Integer id_servicio) {
+	public ResponseDTO deleteServicios(@PathVariable Integer id_servicio) {
 		// TODO Auto-generated method stub
 		
-		serviciosService.deleteServicios(id_servicio);
+		return serviciosService.deleteServicios(id_servicio);
 		
 	}
 	
 	@GetMapping(path="/{id_servicio}")
-	public ServiciosDTO buscarPorId_servicio(@PathVariable Integer id_servicio) {
+	public ResponseDTO buscarPorId_servicio(@PathVariable Integer id_servicio) {
 		
 		return serviciosService.buscarPorId_servicio(id_servicio);
 	}

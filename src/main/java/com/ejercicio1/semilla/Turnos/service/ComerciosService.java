@@ -23,9 +23,12 @@ public class ComerciosService implements IComerciosService {
 	private IComerciosMapper mapperComercios;
 
 	@Override
-	public List<ComerciosEntity> getAll() {
+	public ResponseDTO getAll() {
 		// TODO Auto-generated method stub
-		return comerciosRepository.findAll();
+		List<ComerciosEntity> comercioEntity = comerciosRepository.findAll();
+		
+		return new ResponseDTO(mapperComercios.listEntityToDto(comercioEntity),true,"ok",HttpStatus.OK);
+		
 	}
 
 	public IComerciosRepository getComerciosRepository() {
@@ -53,15 +56,16 @@ public class ComerciosService implements IComerciosService {
 	}
 
 	@Override
-	public ResponseDTO createComercio(ComerciosEntity comerciosEntity) {
+	public ResponseDTO createComercio(ComerciosDTO comerciosDTO) {
 		// TODO Auto-generated method stub
 		
 		
 		try {
 			
-			comerciosRepository.save(comerciosEntity);
+			ComerciosEntity comerciosEntity = mapperComercios.dtoToEntity(comerciosDTO);
 			
-			return new ResponseDTO(comerciosEntity,true,"El comercio se creo correctamente",HttpStatus.OK);
+			return new ResponseDTO(mapperComercios.entityToDto(comerciosRepository.save(comerciosEntity)), true, "ok", HttpStatus.OK);
+			
 		}catch (Exception e){
 			return new ResponseDTO(null,false,"No se puede crear el comercio",HttpStatus.OK);
 		}
@@ -69,14 +73,14 @@ public class ComerciosService implements IComerciosService {
 	}
 
 	@Override
-	public ResponseDTO updateComercio(ComerciosEntity comerciosEntity) {
+	public ResponseDTO updateComercio(ComerciosDTO comerciosDTO) {
 		// TODO Auto-generated method stub
 		
 		try {
+			ComerciosEntity comerciosEntity = mapperComercios.dtoToEntity(comerciosDTO);
 			
-			comerciosRepository.save(comerciosEntity);
+			return new ResponseDTO(mapperComercios.entityToDto(comerciosRepository.save(comerciosEntity)), true, "ok", HttpStatus.OK);
 			
-			return new ResponseDTO(comerciosEntity,true,"ok",HttpStatus.OK);
 		}catch (Exception e){
 			return new ResponseDTO(null,true,"No se puede cargar el comercio",HttpStatus.OK);
 		}
@@ -99,13 +103,17 @@ public class ComerciosService implements IComerciosService {
 	}
 
 	@Override
-	public ComerciosDTO buscarPorId_comercio(Integer id_comercio) {
+	public ResponseDTO buscarPorId_comercio(Integer id_comercio) {
 		// TODO Auto-generated method stub
 		
-		Optional<ComerciosEntity> comerciosEntity = comerciosRepository.findById(id_comercio);
-		
-		
-		return mapperComercios.entityToDto(comerciosEntity.get());
+		try {
+			Optional<ComerciosEntity> comerciosEntity = comerciosRepository.findById(id_comercio);
+			comerciosEntity.get();
+			return new ResponseDTO( mapperComercios.entityToDto(comerciosEntity.get()), true, "ok", HttpStatus.OK);
+		}catch (Exception e) {
+			return new ResponseDTO(null, false, "No se encontro el Comercio", HttpStatus.OK);
+			
+		}
 	}
 
 }

@@ -1,25 +1,26 @@
 package com.ejercicio1.semilla.Turnos.service;
 
-import java.util.List;
 
+
+import com.ejercicio1.semilla.Turnos.dto.ResponseDTO;
 import com.ejercicio1.semilla.Turnos.dto.ServiciosDTO;
-import com.ejercicio1.semilla.Turnos.entity.ServiciosEntity;
+
 
 public interface IServiciosService {
 	
-	public List<ServiciosEntity> getAll();
+	public ResponseDTO  getAll();
 	
 	
-	public ServiciosDTO getServiciosById_servicio(Integer id_servicio);
+	public ResponseDTO getServiciosById_servicio(Integer id_servicio);
 	
-	public ServiciosDTO createServicios(ServiciosDTO serviciosDTO);
+	public ResponseDTO createServicios(ServiciosDTO serviciosDTO);
 	
-	public ServiciosDTO updateServicios(ServiciosDTO serviciosDTO);
+	public ResponseDTO updateServicios(ServiciosDTO serviciosDTO);
 	
-	public void deleteServicios(Integer id_servicio);
+	public ResponseDTO deleteServicios(Integer id_servicio);
 
 
-	public ServiciosDTO buscarPorId_servicio(Integer id_servicio);
+	public ResponseDTO buscarPorId_servicio(Integer id_servicio);
 
 
 }

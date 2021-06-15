@@ -4,8 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import com.ejercicio1.semilla.Turnos.dto.ResponseDTO;
 import com.ejercicio1.semilla.Turnos.dto.TurnosDTO;
 import com.ejercicio1.semilla.Turnos.entity.TurnosEntity;
 import com.ejercicio1.semilla.Turnos.mapper.ITurnosMapper;
@@ -22,42 +24,54 @@ public class TurnosService implements ITurnosService {
 	
 	
 	@Override
-	public List<TurnosEntity> getAll() {
+	public ResponseDTO getAll() {
 		// TODO Auto-generated method stub
-		return turnosRepository.findAll();
+		List<TurnosEntity> turnoEntity = turnosRepository.findAll();
+		
+		return new ResponseDTO(mapperTurnos.listEntityToDto(turnoEntity),true, "ok", HttpStatus.OK);
 	}
 
 	@Override
-	public TurnosDTO getTurnosById_turnos(Integer id_turno) {
+	public ResponseDTO getTurnosById_turnos(Integer id_turno) {
+		Optional<TurnosEntity> optional= turnosRepository.findById(id_turno);
+		if (optional.isPresent()) {
+			return new ResponseDTO(optional.get(), true, "ok", HttpStatus.OK);
+		}else {
+			return new ResponseDTO(null, false, "No se encontro el Turno", HttpStatus.OK);
+		}
+	
+	}
+
+	@Override
+	public ResponseDTO createTurnos(TurnosDTO turnosDTO) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public TurnosDTO createTurnos(TurnosDTO turnosDTO) {
+	public ResponseDTO updateTurnos(TurnosDTO turnosDTO) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public TurnosDTO updateTurnos(TurnosDTO turnosDTO) {
+	public ResponseDTO deleteTurnos(Integer id_turno) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deleteTurnos(Integer id_turno) {
+	public ResponseDTO buscarPorId_turno(Integer id_turno) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	@Override
-	public TurnosDTO buscarPorId_turno(Integer id_turno) {
-		// TODO Auto-generated method stub
-		
-		Optional<TurnosEntity> turnosEntity = turnosRepository.findById(id_turno);
-		
-		return mapperTurnos.entityToDto(turnosEntity.get());
+		try {
+			Optional<TurnosEntity> turnoEntity = turnosRepository.findById(id_turno);
+			turnoEntity.get();
+			return new ResponseDTO(mapperTurnos.entityToDto(turnoEntity.get()), true, "ok", HttpStatus.OK);
+		}catch (Exception e) {
+			return new ResponseDTO(null, false, "No se encontro el Turno", HttpStatus.OK);
+			
+		}
 	}
 
 	

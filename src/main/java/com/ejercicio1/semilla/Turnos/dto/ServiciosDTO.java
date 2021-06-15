@@ -5,7 +5,7 @@ import java.util.List;
 
 
 
-import com.ejercicio1.semilla.Turnos.entity.TurnosEntity;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
 @Data
@@ -21,17 +21,17 @@ public class ServiciosDTO {
 
 	private String nombre_servicio;
 	
-
+	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern ="HH:mm:ss",timezone = "America/New_York") 
 	private Date hr_apertura;
 	
-
+	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern ="HH:mm:ss",timezone = "America/New_York") 
 	private Date hora_cierre;
 	
-
+	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern ="HH:mm:ss",timezone = "America/New_York") 
 	private Date duracion;
 	
 
-	private List<TurnosEntity> turnos;
+	private List<TurnosDTO> turnos;
 	
 	
 }
