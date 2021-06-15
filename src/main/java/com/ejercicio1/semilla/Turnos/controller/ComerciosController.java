@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ejercicio1.semilla.Turnos.dto.ComerciosDTO;
+import com.ejercicio1.semilla.Turnos.dto.ResponseDTO;
 import com.ejercicio1.semilla.Turnos.entity.ComerciosEntity;
 import com.ejercicio1.semilla.Turnos.service.IComerciosService;
 
@@ -32,13 +34,13 @@ public class ComerciosController {
 	///Listar uno
 	
 	@GetMapping(path="/comercios/{id_comercio}")
-	public ComerciosEntity getComercioById_comercio(@PathVariable Integer id_comercio) {
+	public ResponseDTO getComercioById_comercio(@PathVariable Integer id_comercio) {
 		
 		return comerciosService.getComercioById_comercio(id_comercio);
 	}
 
 	@GetMapping(path="/comercios")
-	public ComerciosEntity getParameterComercioById_comercio(@RequestParam Integer id_comercio) {
+	public ResponseDTO getParameterComercioById_comercio(@RequestParam Integer id_comercio) {
 		
 		return comerciosService.getComercioById_comercio(id_comercio);
 	}
@@ -46,7 +48,7 @@ public class ComerciosController {
 	
 	// crear
 	@PostMapping(path = "/crear", consumes = "application/json", produces = "application/json")
-	public ComerciosEntity createComercio(@RequestBody ComerciosEntity entity) {
+	public ResponseDTO createComercio(@RequestBody ComerciosEntity entity) {
 		
 		return comerciosService.createComercio(entity); 
 				
@@ -54,22 +56,27 @@ public class ComerciosController {
 	
 	//editar
 	@PostMapping(path="/editar", consumes = "application/json", produces = "application/json")
-	public ComerciosEntity editarComercio(@RequestBody ComerciosEntity entity) {
+	public ResponseDTO editarComercio(@RequestBody ComerciosEntity entity) {
 		
 		return comerciosService.updateComercio(entity);
 	}
 	//delete 
 	
 	@GetMapping(path = "/eliminar/{id_comercio}")
-	public void deleteComercio(@PathVariable Integer id_comercio) {
+	public ResponseDTO deleteComercio(@PathVariable Integer id_comercio) {
 		// TODO Auto-generated method stub
 		
-		comerciosService.deleteComercio(id_comercio);
+		return comerciosService.deleteComercio(id_comercio);
 		
 	}
 	
 	
-
+	@GetMapping(path="/{id_comercio}")
+	public ComerciosDTO buscarPorId_comercio(@PathVariable Integer id_comercio) {
+		
+		return comerciosService.buscarPorId_comercio(id_comercio);
+	}
+	
 	
 	
 }

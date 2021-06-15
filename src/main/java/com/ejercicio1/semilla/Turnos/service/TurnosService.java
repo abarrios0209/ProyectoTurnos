@@ -1,11 +1,14 @@
 package com.ejercicio1.semilla.Turnos.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ejercicio1.semilla.Turnos.dto.TurnosDTO;
 import com.ejercicio1.semilla.Turnos.entity.TurnosEntity;
+import com.ejercicio1.semilla.Turnos.mapper.ITurnosMapper;
 import com.ejercicio1.semilla.Turnos.repository.ITurnosRepository;
 
 @Service
@@ -13,6 +16,9 @@ public class TurnosService implements ITurnosService {
 
 	@Autowired
 	private ITurnosRepository turnosRepository;
+	
+	@Autowired
+	private ITurnosMapper mapperTurnos;
 	
 	
 	@Override
@@ -22,19 +28,19 @@ public class TurnosService implements ITurnosService {
 	}
 
 	@Override
-	public TurnosEntity getTurnosById_turnos(Integer id_turno) {
+	public TurnosDTO getTurnosById_turnos(Integer id_turno) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public TurnosEntity createTurnos(TurnosEntity turnosEntity) {
+	public TurnosDTO createTurnos(TurnosDTO turnosDTO) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public TurnosEntity updateTurnos(TurnosEntity turnosEntity) {
+	public TurnosDTO updateTurnos(TurnosDTO turnosDTO) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -43,6 +49,15 @@ public class TurnosService implements ITurnosService {
 	public void deleteTurnos(Integer id_turno) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public TurnosDTO buscarPorId_turno(Integer id_turno) {
+		// TODO Auto-generated method stub
+		
+		Optional<TurnosEntity> turnosEntity = turnosRepository.findById(id_turno);
+		
+		return mapperTurnos.entityToDto(turnosEntity.get());
 	}
 
 	

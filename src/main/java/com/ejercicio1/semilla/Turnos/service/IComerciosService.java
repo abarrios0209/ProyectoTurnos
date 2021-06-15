@@ -2,6 +2,8 @@ package com.ejercicio1.semilla.Turnos.service;
 
 import java.util.List;
 
+import com.ejercicio1.semilla.Turnos.dto.ComerciosDTO;
+import com.ejercicio1.semilla.Turnos.dto.ResponseDTO;
 import com.ejercicio1.semilla.Turnos.entity.ComerciosEntity;
 
 public interface IComerciosService {
@@ -9,12 +11,14 @@ public interface IComerciosService {
 	
 	public List<ComerciosEntity> getAll();
 	
-	public ComerciosEntity getComercioById_comercio(Integer id_comercio);
+	public ResponseDTO getComercioById_comercio(Integer id_comercio);
 	
-	public ComerciosEntity createComercio(ComerciosEntity comerciosEntity);
+	public ResponseDTO createComercio(ComerciosEntity comerciosEntity);
 	
-	public ComerciosEntity updateComercio(ComerciosEntity comerciosEntity);
+	public ResponseDTO updateComercio(ComerciosEntity comerciosEntity);
 	
-	public void deleteComercio(Integer id_comercio);
+	public ResponseDTO deleteComercio(Integer id_comercio);
 	
+	public ComerciosDTO buscarPorId_comercio(Integer id_comercio);
+
 }

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.ejercicio1.semilla.Turnos.dto.ServiciosDTO;
 import com.ejercicio1.semilla.Turnos.entity.ServiciosEntity;
 import com.ejercicio1.semilla.Turnos.service.IServiciosService;
 
@@ -31,13 +31,13 @@ public class ServiciosController {
 	///Listar uno
 	
 	@GetMapping(path="/servicios/{id_servicio}")
-	public ServiciosEntity getServiciosById_servicio(@PathVariable Integer id_servicio) {
+	public ServiciosDTO getServiciosById_servicio(@PathVariable Integer id_servicio) {
 		
 		return serviciosService.getServiciosById_servicio(id_servicio);
 	}
 
 	@GetMapping(path="/servicios")
-	public ServiciosEntity getParameterServiciosById_servicio(@RequestParam Integer id_servicio) {
+	public ServiciosDTO getParameterServiciosById_servicio(@RequestParam Integer id_servicio) {
 		
 		return serviciosService.getServiciosById_servicio(id_servicio);
 	}
@@ -45,17 +45,17 @@ public class ServiciosController {
 	
 	// crear
 	@PostMapping(path = "/crear", consumes = "application/json", produces = "application/json")
-	public ServiciosEntity createServicio(@RequestBody ServiciosEntity entity) {
+	public ServiciosDTO createServicio(@RequestBody ServiciosDTO dto) {
 		
-		return serviciosService.createServicios(entity); 
+		return serviciosService.createServicios(dto); 
 				
 	}
 	
 	//editar
 	@PostMapping(path="/editar", consumes = "application/json", produces = "application/json")
-	public ServiciosEntity editarComercio(@RequestBody ServiciosEntity entity) {
+	public ServiciosDTO editarComercio(@RequestBody ServiciosDTO dto) {
 		
-		return serviciosService.updateServicios(entity);
+		return serviciosService.updateServicios(dto);
 	}
 	//delete 
 	
@@ -67,6 +67,11 @@ public class ServiciosController {
 		
 	}
 	
+	@GetMapping(path="/{id_servicio}")
+	public ServiciosDTO buscarPorId_servicio(@PathVariable Integer id_servicio) {
+		
+		return serviciosService.buscarPorId_servicio(id_servicio);
+	}
 	
 
 }
