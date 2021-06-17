@@ -13,19 +13,19 @@ public class ServiciosDTO {
 
 	
 
-	private Integer identificador_servicio;
+	private Integer identificadorServicio;
 	
 
-	private Integer id_comercio;
+	private Integer idComercio;
 	
 
-	private String nombre_servicio;
+	private String nombreServicio;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern ="HH:mm:ss",timezone = "America/New_York") 
-	private Date hr_apertura;
+	private Date hrApertura;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern ="HH:mm:ss",timezone = "America/New_York") 
-	private Date hora_cierre;
+	private Date horaCierre;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern ="HH:mm:ss",timezone = "America/New_York") 
 	private Date duracion;

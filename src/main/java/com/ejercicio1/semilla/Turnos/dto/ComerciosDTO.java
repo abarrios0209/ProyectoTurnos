@@ -12,13 +12,13 @@ import lombok.Data;
 public class ComerciosDTO {
 
 
-	private Integer identificador_comercio;
+	private Integer identificadorComercio;
 	
 
-	private String nombre_comercio;
+	private String nombreComercio;
 	
 
-	private String aforo_maximo;
+	private String aforoMaximo;
 
 	
 	private List<ServiciosDTO> servicios;

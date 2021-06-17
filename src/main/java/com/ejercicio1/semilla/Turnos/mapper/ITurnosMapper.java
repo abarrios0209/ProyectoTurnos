@@ -13,12 +13,14 @@ import com.ejercicio1.semilla.Turnos.entity.TurnosEntity;
 public interface ITurnosMapper {
 
 	@Mappings({
-		@Mapping(source="id_turno", target="identificador_turno"),
+		@Mapping(source="idTurno", target="identificadorTurno"),
+		@Mapping(source="idServicio", target="identificadorServicio")
 		})	
 	public TurnosDTO entityToDto(TurnosEntity turnosEntity);
 	
 	@Mappings({
-		@Mapping(source="identificador_turno", target="id_turno"),
+		@Mapping(source="identificadorTurno", target="idTurno"),
+		@Mapping(source="identificadorServicio", target="idServicio")
 		})	
 	
 	public TurnosEntity dtoToEntity(TurnosDTO turnosDTO);

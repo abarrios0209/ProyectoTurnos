@@ -20,15 +20,15 @@ public class ComerciosEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_comercio")
-	private Integer id_comercio;
+	private Integer idComercio;
 	
 	@Column(name = "nom_comercio")
-	private String nom_comercio;
+	private String nomComercio;
 	
 	@Column(name = "aforo_maximo")
-	private String aforo_maximo;
+	private String aforoMaximo;
 
-	@OneToMany(mappedBy = "id_comercio")
+	@OneToMany(mappedBy = "idComercio")
 	private List<ServiciosEntity> servicios;
 
 }

@@ -24,22 +24,22 @@ public class TurnosEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_turno")
-	private Integer id_turno;
+	private Integer idTurno;
 	
 	@Column(name = "id_servicio")
-	private Integer id_servicio;
+	private Integer idServicio;
 	
 	@Column(name="fecha_turno")
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date fecha_turno;
+	private Date fechaTurno;
 	
 	@Column(name = "hora_inicio")
 	@Temporal(TemporalType.TIME)
-	private Date hora_inicio;
+	private Date horaInicio;
 	
 	@Column(name = "hora_fin")
 	@Temporal(TemporalType.TIME)
-	private Date hora_fin;
+	private Date horaFin;
 	
 	@Column(name = "estado")
 	private String estado;

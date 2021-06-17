@@ -22,28 +22,28 @@ public class ServiciosEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_servicio")
-	private Integer id_servicio;
+	private Integer idServicio;
 	
 	@Column(name = "id_comercio")
-	private Integer id_comercio;
+	private Integer idComercio;
 	
 	@Column(name = "nom_servicio")
-	private String nom_servicio;
+	private String nomServicio;
 	
 	@Column(name = "hora_apertura")
 	@Temporal(TemporalType.TIME)
-	private Date hora_apertura;
+	private Date horaApertura;
 	
 	@Column(name = "hora_cierre")
 	@Temporal(TemporalType.TIME)
-	private Date hora_cierre;
+	private Date horaCierre;
 	
 	@Column(name = "duracion")
 	@Temporal(TemporalType.TIME)
 	private Date duracion;
 	
 	
-	@OneToMany(mappedBy = "id_turno")
+	@OneToMany(mappedBy = "idServicio")
 	private List<TurnosEntity> turnos;
 	
 

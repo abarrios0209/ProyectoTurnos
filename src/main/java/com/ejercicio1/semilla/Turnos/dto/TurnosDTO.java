@@ -15,19 +15,19 @@ import lombok.Data;
 public class TurnosDTO {
 
 	
-	private Integer identificador_turno;
+	private Integer identificadorTurno;
 	
 
-	private Integer id_servicio;
+	private Integer identificadorServicio;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING ,pattern ="yyyy/mm/dd")
-	private Date fecha_turno;
+	private Date fechaTurno;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING ,pattern ="HH:mm:ss", timezone = "America/New_York")
-	private Date hora_inicio;
+	private Date horaInicio;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING ,pattern ="HH:mm:ss", timezone = "America/New_York")
-	private Date hora_fin;
+	private Date horaFin;
 
 	
 	private String estado;
