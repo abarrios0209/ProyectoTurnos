@@ -1,0 +1,143 @@
+2021-06-20 21:31:54.717  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : Starting TurnosApplication using Java 15.0.2 on ASW3916 with PID 17100 (C:\asesoftware\Turnos\target\classes started by abarrios in C:\asesoftware\Turnos)
+2021-06-20 21:31:54.718  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : No active profile set, falling back to default profiles: default
+2021-06-20 21:31:55.338  INFO 17100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-20 21:31:55.419  INFO 17100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2021-06-20 21:31:55.684  INFO 17100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9003 (http)
+2021-06-20 21:31:55.687  INFO 17100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-20 21:31:55.688  INFO 17100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-20 21:31:55.766  INFO 17100 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-06-20 21:31:55.767  INFO 17100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1038 ms
+2021-06-20 21:31:55.862  INFO 17100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2021-06-20 21:31:55.873  INFO 17100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2021-06-20 21:31:55.901  INFO 17100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-20 21:31:55.920  INFO 17100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-06-20 21:31:56.046  INFO 17100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-20 21:31:56.047  INFO 17100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 21:31:56.418  WARN 17100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-20 21:31:56.637  INFO 17100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-20 21:31:56.678  INFO 17100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9003 (http) with context path ''
+2021-06-20 21:31:56.691  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : Started TurnosApplication in 2.151 seconds (JVM running for 31098.009)
+2021-06-20 21:31:56.693  INFO 17100 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-20 21:31:56.697  INFO 17100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-06-20 21:31:56.699  INFO 17100 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-20 21:33:51.991  INFO 17100 --- [Thread-32] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-06-20 21:33:52.060  INFO 17100 --- [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 21:33:52.063  INFO 17100 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2021-06-20 21:33:52.067  INFO 17100 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2021-06-20 21:34:37.566  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : Starting TurnosApplication using Java 15.0.2 on ASW3916 with PID 17100 (C:\asesoftware\Turnos\target\classes started by abarrios in C:\asesoftware\Turnos)
+2021-06-20 21:34:37.567  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : No active profile set, falling back to default profiles: default
+2021-06-20 21:34:38.326  INFO 17100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-20 21:34:38.330  INFO 17100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2021-06-20 21:34:38.617  INFO 17100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9003 (http)
+2021-06-20 21:34:38.619  INFO 17100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-20 21:34:38.620  INFO 17100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-20 21:34:38.723  INFO 17100 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-06-20 21:34:38.725  INFO 17100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1149 ms
+2021-06-20 21:34:38.854  INFO 17100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2021-06-20 21:34:38.864  INFO 17100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2021-06-20 21:34:38.869  INFO 17100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-20 21:34:38.893  INFO 17100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-06-20 21:34:38.915  INFO 17100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-20 21:34:38.916  INFO 17100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 21:34:38.985  WARN 17100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-20 21:34:39.255  INFO 17100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-20 21:34:39.288  INFO 17100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9003 (http) with context path ''
+2021-06-20 21:34:39.308  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : Started TurnosApplication in 1.88 seconds (JVM running for 31260.626)
+2021-06-20 21:34:39.310  INFO 17100 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-20 21:34:39.315  INFO 17100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-06-20 21:34:39.316  INFO 17100 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-20 21:35:30.488  INFO 17100 --- [Thread-37] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-06-20 21:35:30.590  INFO 17100 --- [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 21:35:30.593  INFO 17100 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2021-06-20 21:35:30.602  INFO 17100 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2021-06-20 21:35:31.111  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : Starting TurnosApplication using Java 15.0.2 on ASW3916 with PID 17100 (C:\asesoftware\Turnos\target\classes started by abarrios in C:\asesoftware\Turnos)
+2021-06-20 21:35:31.112  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : No active profile set, falling back to default profiles: default
+2021-06-20 21:35:31.977  INFO 17100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-20 21:35:31.981  INFO 17100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2021-06-20 21:35:32.605  INFO 17100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9003 (http)
+2021-06-20 21:35:32.608  INFO 17100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-20 21:35:32.609  INFO 17100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-20 21:35:32.782  INFO 17100 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-06-20 21:35:32.783  INFO 17100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1656 ms
+2021-06-20 21:35:33.055  INFO 17100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2021-06-20 21:35:33.070  INFO 17100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2021-06-20 21:35:33.077  INFO 17100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-20 21:35:33.121  INFO 17100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-06-20 21:35:33.167  INFO 17100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-20 21:35:33.169  INFO 17100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 21:35:33.331  WARN 17100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-20 21:35:34.242  INFO 17100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-20 21:35:34.313  INFO 17100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9003 (http) with context path ''
+2021-06-20 21:35:34.383  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : Started TurnosApplication in 3.49 seconds (JVM running for 31315.701)
+2021-06-20 21:35:34.386  INFO 17100 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-20 21:35:34.390  INFO 17100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-06-20 21:35:34.391  INFO 17100 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-20 21:35:36.796  INFO 17100 --- [Thread-45] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-06-20 21:35:36.903  INFO 17100 --- [Thread-45] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 21:35:36.905  INFO 17100 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2021-06-20 21:35:36.938  INFO 17100 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2021-06-20 21:35:45.045  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : Starting TurnosApplication using Java 15.0.2 on ASW3916 with PID 17100 (C:\asesoftware\Turnos\target\classes started by abarrios in C:\asesoftware\Turnos)
+2021-06-20 21:35:45.046  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : No active profile set, falling back to default profiles: default
+2021-06-20 21:35:45.616  INFO 17100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-20 21:35:45.692  INFO 17100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
+2021-06-20 21:35:45.929  INFO 17100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9003 (http)
+2021-06-20 21:35:45.932  INFO 17100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-20 21:35:45.932  INFO 17100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-20 21:35:46.013  INFO 17100 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-06-20 21:35:46.013  INFO 17100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 961 ms
+2021-06-20 21:35:46.096  INFO 17100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2021-06-20 21:35:46.104  INFO 17100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2021-06-20 21:35:46.130  INFO 17100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-20 21:35:46.147  INFO 17100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-06-20 21:35:46.259  INFO 17100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-20 21:35:46.260  INFO 17100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 21:35:46.645  WARN 17100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-20 21:35:46.868  INFO 17100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-20 21:35:46.902  INFO 17100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9003 (http) with context path ''
+2021-06-20 21:35:46.916  INFO 17100 --- [restartedMain] c.e.semilla.Turnos.TurnosApplication     : Started TurnosApplication in 1.963 seconds (JVM running for 31328.234)
+2021-06-20 21:35:46.917  INFO 17100 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-20 21:35:46.920  INFO 17100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-06-20 21:35:46.921  INFO 17100 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-20 21:36:49.746  INFO 13720 --- [main] c.e.s.Turnos.TurnosApplicationTests      : Starting TurnosApplicationTests using Java 15.0.2 on ASW3916 with PID 13720 (started by abarrios in C:\asesoftware\Turnos)
+2021-06-20 21:36:49.762  INFO 13720 --- [main] c.e.s.Turnos.TurnosApplicationTests      : No active profile set, falling back to default profiles: default
+2021-06-20 21:36:53.082  INFO 13720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-20 21:36:53.477  INFO 13720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 344 ms. Found 3 JPA repository interfaces.
+2021-06-20 21:36:55.953  INFO 13720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-20 21:36:56.846  INFO 13720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-20 21:36:57.206  INFO 13720 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-20 21:36:57.448  INFO 13720 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-20 21:36:58.179  INFO 13720 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-20 21:36:59.005  INFO 13720 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-06-20 21:37:01.825  INFO 13720 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-20 21:37:01.868  INFO 13720 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 21:37:05.811  WARN 13720 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-20 21:37:08.563  INFO 13720 --- [main] c.e.s.Turnos.TurnosApplicationTests      : Started TurnosApplicationTests in 20.17 seconds (JVM running for 25.3)
+2021-06-20 21:37:08.570  INFO 13720 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-20 21:37:08.577  INFO 13720 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-20 21:57:28.260  INFO 17100 --- [http-nio-9003-exec-2] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-20 21:57:28.261  INFO 17100 --- [http-nio-9003-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-20 21:57:28.265  INFO 17100 --- [http-nio-9003-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-06-20 21:57:28.273  INFO 17100 --- [http-nio-9003-exec-2] c.e.s.T.controller.ComerciosController   : Ingreso al metodo eliminar Comercio 
+2021-06-20 21:57:28.273  INFO 17100 --- [http-nio-9003-exec-2] c.e.s.T.controller.ComerciosController   : Usuario a eliminar 1234
+2021-06-20 21:57:28.273  INFO 17100 --- [http-nio-9003-exec-2] c.e.s.Turnos.service.ComerciosService    : Ingreso al metodo deleteComercio
+2021-06-20 21:57:28.287 ERROR 17100 --- [http-nio-9003-exec-2] c.e.s.Turnos.service.ComerciosService    : Error No class com.ejercicio1.semilla.Turnos.entity.ComerciosEntity entity with id 1234 exists!
+2021-06-20 22:06:22.897  INFO 17100 --- [Thread-50] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-06-20 22:06:23.006  INFO 17100 --- [Thread-50] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 22:06:23.009  INFO 17100 --- [Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2021-06-20 22:06:23.021  INFO 17100 --- [Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2021-06-20 22:09:43.585  INFO 8900 --- [main] c.e.s.Turnos.TurnosApplicationTests      : Starting TurnosApplicationTests using Java 15.0.2 on ASW3916 with PID 8900 (started by abarrios in C:\asesoftware\Turnos)
+2021-06-20 22:09:43.610  INFO 8900 --- [main] c.e.s.Turnos.TurnosApplicationTests      : No active profile set, falling back to default profiles: default
+2021-06-20 22:09:46.856  INFO 8900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-20 22:09:47.243  INFO 8900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 330 ms. Found 3 JPA repository interfaces.
+2021-06-20 22:09:50.175  INFO 8900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-20 22:09:51.008  INFO 8900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-20 22:09:51.359  INFO 8900 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-20 22:09:51.612  INFO 8900 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-20 22:09:52.318  INFO 8900 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-20 22:09:53.124  INFO 8900 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-06-20 22:09:55.915  INFO 8900 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-20 22:09:55.965  INFO 8900 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-20 22:10:00.281  WARN 8900 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-20 22:10:03.463  INFO 8900 --- [main] c.e.s.Turnos.TurnosApplicationTests      : Started TurnosApplicationTests in 21.38 seconds (JVM running for 26.11)
+2021-06-20 22:10:03.469  INFO 8900 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-20 22:10:03.479  INFO 8900 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC

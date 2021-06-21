@@ -44,5 +44,21 @@ public class TurnosController {
 		return turnosService.buscarPorId_turno(id_turno);
 	}
 	
-
+	
+	//consultar turnos por id_de_servicio
+	@GetMapping(path="/todos/{identificadorServicio}")
+	public ResponseDTO buscarTodosPorIdentificadorServicio(@PathVariable Integer identificadorServicio) {
+		
+		return turnosService.buscarTodosPorIdentificadorServicio(identificadorServicio);
+	
+	}
+	
+	//consultar turnos por nom_de_servicio
+	@GetMapping(path="/servicio")
+	public ResponseDTO buscarTodosPorNomServicio(@RequestParam String nombreServicio) {
+		
+		return turnosService.buscarTodosPorNomServicio(nombreServicio);
+	
+	}
+	
 }

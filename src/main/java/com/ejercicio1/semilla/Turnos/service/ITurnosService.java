@@ -19,4 +19,9 @@ public interface ITurnosService {
 	public ResponseDTO deleteTurnos(Integer id_turno);
 
 	public ResponseDTO buscarPorId_turno(Integer id_turno);
+	
+	public ResponseDTO buscarTodosPorIdentificadorServicio(Integer identificadorServicio);
+	
+	public ResponseDTO buscarTodosPorNomServicio(String nombreServicio);
+	
 }

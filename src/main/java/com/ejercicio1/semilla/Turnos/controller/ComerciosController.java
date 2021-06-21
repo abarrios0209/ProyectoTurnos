@@ -2,6 +2,8 @@ package com.ejercicio1.semilla.Turnos.controller;
 
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +20,8 @@ import com.ejercicio1.semilla.Turnos.service.IComerciosService;
 @RestController
 @RequestMapping(path = "/api/v1/comercios")
 public class ComerciosController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(ComerciosController.class);
 	
 	@Autowired
 	private IComerciosService comerciosService;
@@ -64,6 +68,10 @@ public class ComerciosController {
 	@GetMapping(path = "/eliminar/{id_comercio}")
 	public ResponseDTO deleteComercio(@PathVariable Integer id_comercio) {
 		// TODO Auto-generated method stub
+		
+		logger.info("Ingreso al metodo eliminar Comercio ");
+		
+		logger.info("Usuario a eliminar {}",id_comercio);
 		
 		return comerciosService.deleteComercio(id_comercio);
 		

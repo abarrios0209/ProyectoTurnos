@@ -3,6 +3,8 @@ package com.ejercicio1.semilla.Turnos.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,8 @@ import com.ejercicio1.semilla.Turnos.repository.IComerciosRepository;
 
 @Service
 public class ComerciosService implements IComerciosService {
+	
+	private static final Logger logger = LoggerFactory.getLogger(ComerciosService.class);
 	
 	@Autowired
 	private IComerciosRepository comerciosRepository;
@@ -91,10 +95,19 @@ public class ComerciosService implements IComerciosService {
 	public ResponseDTO deleteComercio(Integer id_comercio) {
 		// TODO Auto-generated method stub
 		
+		logger.info("Ingreso al metodo deleteComercio");
+		
+		
 		try {
 			comerciosRepository.deleteById(id_comercio);
+			
+			logger.info("El usuario {} se elimino",id_comercio);
+			
 			return new ResponseDTO(null,true,"Usuario eliminado",HttpStatus.OK);
 		}catch (Exception e){
+			
+			logger.error("Error {}",e.getMessage());
+			
 			return new ResponseDTO(null,false,"Usuario no se puede eliminar",HttpStatus.OK);
 		}
 		

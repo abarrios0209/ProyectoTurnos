@@ -74,6 +74,28 @@ public class TurnosService implements ITurnosService {
 		}
 	}
 
-	
+	@Override
+	public ResponseDTO buscarTodosPorIdentificadorServicio(Integer identificadorServicio) {
+		// TODO Auto-generated method stub
+		
+		//List<TurnosDTO> listTurnosDTOs = mapperTurnos.listEntityToDto(turnosRepository.findByIdServicio(identificadorServicio));
+		List<TurnosDTO> listTurnosDTOs = mapperTurnos.listEntityToDto(turnosRepository.queryIdServicio(identificadorServicio));
+		
+		
+		
+		return new ResponseDTO(listTurnosDTOs,true,"OK",HttpStatus.OK);
+	}
+
+	@Override
+	public ResponseDTO buscarTodosPorNomServicio(String nombreServicio) {
+		// TODO Auto-generated method stub
+		
+		/*List<TurnosDTO> listTurnosDTOs = mapperTurnos.listEntityToDto(turnosRepository.queryIdServicio(nombreServicio));*/
+		List<TurnosDTO> listTurnosDTOs = turnosRepository.queryIdServicioDTO(nombreServicio);
+		
+		
+		return new ResponseDTO(listTurnosDTOs, true,"ok",HttpStatus.OK);
+	}
+
 	
 }
